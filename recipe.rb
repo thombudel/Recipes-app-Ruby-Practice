@@ -39,7 +39,9 @@ def cut_onions
   counter+=1
   puts "Cut onion #{counter}"
   print_progress_bar
+  end
 end
+
 
 
 ingredients=[
@@ -79,7 +81,14 @@ loop do
     else
       puts "Please say Yes or No to me!!"
       print_progress_bar
-  end
+    end
+end
+
+def ask_if_ready(step, index)
+  puts "Are you ready for step #{index + 1} (YES?)?\n(#{step[:description]})"
+  answer = gets.chomp.upcase
+
+  answer.upcase == 'YES'
 end
 
 steps=[
@@ -105,7 +114,19 @@ steps.each_with_index do |step, index|
   puts (index + 1).to_s + " #{step[:description]}"
 end
 
+steps.each_with_index do |step, index|
+  print_divider
 
+  loop do
+    ready = ask_if_ready(step, index)
+    break if ready
+
+    puts "OK, I will give you some extra time."
+    print_progress_bar
+  end
+
+  send(step[:action])
+end
 
 print_divider
 puts "Eetsmakelijk!"
