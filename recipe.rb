@@ -19,3 +19,13 @@ ingredients=[
   {name:"salt", quantity:"teaspoon"},
   {name:"milk", quantity:"half a cup"},
 ]
+
+puts"Let's cook some delicious hutspot!"
+
+print_divider
+
+puts"Please go to the Albert Heijn ASAP and get me: "
+
+ingredients.each do |ingredient|
+  puts "#{ingredient[:quantity]} #{ingredient[:name]}"
+end
