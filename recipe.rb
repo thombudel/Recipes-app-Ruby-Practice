@@ -64,3 +64,18 @@ steps=[
   {description: "Put the salt in",action: "add_salt"},
   {description: "Mash the potatoes, carrots and onions",action: "mash_everything"},
 ]
+
+print_divider
+print_divider
+print_divider
+
+puts "Please follow the steps below: "
+
+steps.each_with_index do |step, index|
+  puts (index + 1).to_s + " #{step[:description]}"
+end
+
+
+
+print_divider
+puts "Eetsmakelijk!"
