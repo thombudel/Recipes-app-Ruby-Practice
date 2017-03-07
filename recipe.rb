@@ -52,6 +52,8 @@ ingredients=[
   {name:"milk", quantity:"half a cup"},
 ]
 
+print_divider
+
 puts"Let's cook some delicious hutspot!"
 
 print_divider
@@ -79,7 +81,7 @@ loop do
       print_progress_bar
       print_progress_bar
     else
-      puts "Please say Yes or No to me!!"
+      puts "Please say yes or no to me!!"
       print_progress_bar
     end
 end
