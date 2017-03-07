@@ -51,3 +51,16 @@ loop do
       print_progress_bar
   end
 end
+
+steps=[
+  {description: "Wash the potatoes" ,action: "wash_potatoes"},
+  {description: "Wash the carrots" ,action: "wash_carrots"},
+  {description: "Cut the potatoes",action: "cut_potatoes"},
+  {description: "Cut the carrots" ,action: "cut_carrots"},
+  {description: "Cut the onions",action: "cut_onions"},
+  {description: "Throw the carrots, potatoes and onions in a pan with water",action: "throw_in_pan"},
+  {description: "Boil it for 20 minutes",action: "boil_ingredients"},
+  {description: "Put the milk in",action: "add_milk"},
+  {description: "Put the salt in",action: "add_salt"},
+  {description: "Mash the potatoes, carrots and onions",action: "mash_everything"},
+]
