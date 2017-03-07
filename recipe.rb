@@ -12,6 +12,36 @@ end
 @num_potatoes=7
 @num_onions=3
 
+def generic_recipe_step
+  puts "Got it!"
+  print_progress_bar
+end
+
+def cut_potatoes
+  counter=0
+  while counter<@num_potatoes
+  counter+=1
+  puts "Cut potatoe #{counter}"
+  print_progress_bar
+  end
+end
+def cut_carrots
+  counter=0
+  while counter<@num_carrots
+  counter+=1
+  puts "Cut carrot #{counter}"
+  print_progress_bar
+  end
+end
+def cut_onions
+  counter=0
+  while counter<@num_onions
+  counter+=1
+  puts "Cut onion #{counter}"
+  print_progress_bar
+end
+
+
 ingredients=[
   {name:"carrots",quantity:@num_carrots},
   {name:"potatoes",quantity:@num_potatoes},
@@ -53,16 +83,16 @@ loop do
 end
 
 steps=[
-  {description: "Wash the potatoes" ,action: "wash_potatoes"},
-  {description: "Wash the carrots" ,action: "wash_carrots"},
+  {description: "Wash the potatoes" ,action: "generic_recipe_step"},
+  {description: "Wash the carrots" ,action: "generic_recipe_step"},
   {description: "Cut the potatoes",action: "cut_potatoes"},
   {description: "Cut the carrots" ,action: "cut_carrots"},
   {description: "Cut the onions",action: "cut_onions"},
-  {description: "Throw the carrots, potatoes and onions in a pan with water",action: "throw_in_pan"},
-  {description: "Boil it for 20 minutes",action: "boil_ingredients"},
-  {description: "Put the milk in",action: "add_milk"},
-  {description: "Put the salt in",action: "add_salt"},
-  {description: "Mash the potatoes, carrots and onions",action: "mash_everything"},
+  {description: "Throw the carrots, potatoes and onions in a pan with water",action: "generic_recipe_step"},
+  {description: "Boil it for 20 minutes",action: "generic_recipe_step"},
+  {description: "Put the milk in",action: "generic_recipe_step"},
+  {description: "Put the salt in",action: "generic_recipe_step"},
+  {description: "Mash the potatoes, carrots and onions",action: "generic_recipe_step"},
 ]
 
 print_divider
